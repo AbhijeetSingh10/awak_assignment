@@ -56,10 +56,15 @@ input[type="password"] {
   margin-left: 7px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #fff; /* Ensure input background is white for contrast */
+  color: #333; /* Dark text for readability */
 }
 
+input[type="password"] {
+  padding-right: 60px; /* Extra space for the toggle password button */
+
 button {
-  width: calc(100% - 14px);/* Adjust the width to account for padding and margin */ 
+  width: calc(100% - 40px);/* Adjust the width to account for padding and margin */ 
   padding: 10px;
   background-color: #2911c6;
   color: white;
@@ -73,14 +78,17 @@ button:hover {
 }
 
 .error {
-  color: red;
+  color: yellowish green;
   font-size: 0.9em;
 }
 
 .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  font-size: 0.9em;
-  margin-left: 5px;
+  font-size: 14px; /* Slightly smaller font size for the toggle button */
   color: #007bff;
 }
 
