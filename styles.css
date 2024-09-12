@@ -1,38 +1,102 @@
+/* styles.css */
+
+body {
   font-family: Arial, sans-serif;
-  background-color: whitesmoke;
-  background-image: url(img.jpg);
-  background-size: cover; /* Ensure the background image covers the entire viewport */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-attachment: fixed; /* Make sure the background image stays fixed */
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
-	@@ -18,6 +21,7 @@ body {
-  box-shadow: 0 4px 8px rgba(224, 7, 7, 0.1);
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  height: 100vh;
+  margin: 0;
 }
 
-h2 {
-	@@ -35,15 +39,15 @@ label {
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.icon {
+  margin: 0 10px;
+}
 
 input[type="email"],
 input[type="password"] {
-  width: calc(100% - 14px); /* Adjust the width to account for padding and margin */  
-  padding: 7px;
-  margin-left: 7px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
   border-radius: 4px;
 }
 
-button {
-  width: calc(100% - 14px);/* Adjust the width to account for padding and margin */ 
-  padding: 10px;
-  background-color: #2911c6;
-  color: white;
-	@@ -113,4 +117,4 @@ button:hover {
+input[type="password"] {
+  padding-right: 40px; /* Extra space for the toggle password button */
+}
 
-.success-card p {
-  color: #333;
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.success-icon {
+  margin-bottom: 10px;
 }
