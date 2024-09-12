@@ -1,5 +1,3 @@
-
-body {
   font-family: Arial, sans-serif;
   background-color: whitesmoke;
   background-image: url(img.jpg);
@@ -9,134 +7,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  color: white;
-}
-
-.form-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	@@ -18,6 +21,7 @@ body {
+  box-shadow: 0 4px 8px rgba(224, 7, 7, 0.1);
   width: 100%;
   max-width: 400px;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 h2 {
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  position: relative; /* Ensure positioning context for icons and toggle */
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.input-container {
-  position: relative;
-}
-
-.input-container .icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ccc;
-  font-size: 16px; /* Adjust icon size if necessary */
-}
+	@@ -35,15 +39,15 @@ label {
 
 input[type="email"],
 input[type="password"] {
-  width: calc(100% - 40px); /* Adjust the width to account for padding and margin */  
-  padding: 7px 10px 7px 30px; /* Add padding for icon */
+  width: calc(100% - 14px); /* Adjust the width to account for padding and margin */  
+  padding: 7px;
   margin-left: 7px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #fff; /* Ensure input background is white for contrast */
-  color: #333; /* Dark text for readability */
 }
 
-input[type="password"] {
-  padding-right: 50px; /* Extra space for the toggle password button */
-
 button {
-  width: calc(100% - 40px);/* Adjust the width to account for padding and margin */ 
+  width: calc(100% - 14px);/* Adjust the width to account for padding and margin */ 
   padding: 10px;
   background-color: #2911c6;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-}
-
-button:hover {
-  background-color: #6da1be;
-}
-
-.error {
-  color: yellowish green;
-  font-size: 0.9em;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 14px; /* Slightly smaller font size for the toggle button */
-  color: #007bff;
-}
-
-.spinner {
-  width: 30px;
-  height: 30px;
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 10px auto;
-}
-
-@keyframes spin {
-  0% {
-       transform: rotate(0deg);
-  }
-
-  100% {
-       transform: rotate(360deg);
-  }
-}
-
-
-.success-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.success-icon {
-  margin-bottom: 10px;
-}
-
-.success-card h2 {
-  color: #28a745;
-}
+	@@ -113,4 +117,4 @@ button:hover {
 
 .success-card p {
   color: #333;
